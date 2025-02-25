@@ -1,5 +1,13 @@
+:root.dark{
+    --background-color: black;
+}
+
+:root{
+    --background-color: rgb(255, 255, 255);
+}
+
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: var(--background-color);
     margin: 0;
 }
 
@@ -15,6 +23,7 @@ body{
     position: sticky;
     top: 0;
     background-color: white;
+    box-shadow: 0 5px 10px 0px rgb(226, 226, 226);
 }
 .headerRight{
     display: flex;
@@ -31,7 +40,7 @@ button{
 
 img{
     margin-top: 2vw;
-    max-width: 500px;;
+    max-width: 500px;
 }
 
 .phone{
@@ -42,11 +51,17 @@ img{
 
 .customizePhone{
     margin-top: 10vh;
-    width: 500px;
+    width: 300px;
+    overflow: scroll;
+    height: 375px;
 }
 
 .specs{
     /* Apply min, max, and clamp here for a responsive design */
-    width: 50vw;
+    width: clamp(45ch, 50% ,75ch);
     margin: 0 25vw;
+    padding: 0px 10px;
+    box-shadow: 10px 10px 20px 5px rgb(7, 7, 7);
+    background-color: rgb(232, 231, 231);
+    font-size: 1.5rem;
 }
